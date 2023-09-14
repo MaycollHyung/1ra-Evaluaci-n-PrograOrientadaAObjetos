@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     // Ojala tuviera una lista de strings que me hicieran reir...
 
+    public List<string> lista_JAJA = new List<string>();
+
     [Header("References")]
     [SerializeField] private EnemyManager m_enemyManager;
 
@@ -49,6 +51,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void MoveTo(Vector2 direction)
     {
+
+
         // Comparar si es el turno del jugador y si se puede mover
         if (!m_isPlayerTurn) return;
         if (m_isMoving) return;

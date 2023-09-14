@@ -18,8 +18,11 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         // Hmm, no recuerdo como spawnear un numero determinado de enemigos a la vez...
-        for(int i = 0; i < 5; i++);
-        SpawnEnemy();
+        for(int i = 0; i < 5; i++)
+        {
+            SpawnEnemy();
+        }
+        
 
     }
 
@@ -58,7 +61,6 @@ public class EnemyManager : MonoBehaviour
 
 
     }
-
 
 
 

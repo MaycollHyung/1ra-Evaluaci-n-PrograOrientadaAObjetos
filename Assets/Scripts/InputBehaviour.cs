@@ -15,7 +15,14 @@ public class InputBehaviour : MonoBehaviour
     /// </summary>
     private void Tap(Vector2 position)
     {
-
+        if (Input.touchCount > 0)
+        {
+            Touch finger = Input.GetTouch(0);
+            if(finger.phase == TouchPhase.Began)
+            {
+                position = finger.position;
+            }
+        }
     }
 
     /// <summary>
@@ -24,7 +31,10 @@ public class InputBehaviour : MonoBehaviour
     /// </summary>
     private void Press(bool pressed, Vector2 position)
     {
-
+        if(pressed)
+        {
+            
+        }
     }
 
     /// <summary>
@@ -32,7 +42,7 @@ public class InputBehaviour : MonoBehaviour
     /// </summary>
     private void SwipeLeft()
     {
-
+        transform.position-= Vector3.right;
     }
 
     /// <summary>
@@ -40,7 +50,7 @@ public class InputBehaviour : MonoBehaviour
     /// </summary>
     private void SwipeRight()
     {
-
+        transform.position += Vector3.right;
     }
 
     /// <summary>
@@ -48,7 +58,7 @@ public class InputBehaviour : MonoBehaviour
     /// </summary>
     private void SwipeUp()
     {
-
+        transform.position += Vector3.up;
     }
 
     /// <summary>
@@ -56,7 +66,7 @@ public class InputBehaviour : MonoBehaviour
     /// </summary>
     private void SwipeDown()
     {
-
+        transform.position -= Vector3.up;
     }
 
 
